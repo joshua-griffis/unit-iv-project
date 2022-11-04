@@ -1,0 +1,18 @@
+{% extends "baseTemplate.html" %} {% load static %} {% block additionCSSFiles %}
+<link href="{% static "css/styles_home_page.css" %}" rel="stylesheet">
+{%endblock %} {% block content %}
+<div class="homepage">
+  <div class="homepage__description__box">
+    <h1 class="homepage_title">WELCOME TO FANTASY INVENTORY!</h1>
+    <p>Shop Items and Collectibles from Your Favorite Fantasies!</p>
+  </div>
+  <div class="other_title">
+    <h1>FEATURED ITEM OF THE DAY</h1>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="master">MASTERBALL</h2>
+    </div>
+  </div>
+</div>
+{% endblock %}

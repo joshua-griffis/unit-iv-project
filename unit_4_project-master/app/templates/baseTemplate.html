@@ -1,0 +1,59 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Inventory</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet" />
+    <link href="{% static '/css/styles_base.css/'%}" rel="stylesheet" />
+    {% block additionCSSFiles %} {% endblock %}
+  </head>
+  <body class="preload">
+    <header class="header">
+      <div class="header__title">
+        <p class="header__title__text">Fantasy Inventory</p>
+      </div>
+      <div class="header__button__section">
+        <button class="header__button" id="btnCart" type="button">
+          <a class="btnCartLink" href="/fantasy_inventory/Cart/">
+            <i class="material-icons">shopping_cart</i>
+          </a>
+        </button>
+        <button class="header__button" id="btnNav" type="button">
+          <i class="material-icons">menu</i>
+        </button>
+      </div>
+    </header>
+    <nav class="nav">   
+      <div class="nav__links">
+        <h2 class="nav__title">SECTIONS</h2>
+        <a href="/" class="nav__link">
+          <span class="material-icons">home</span>
+            Home
+        </a>
+        <a href="/Video-Games/" class="nav__link">
+          <span class="material-icons">sports_esports</span>
+          Video Games
+        </a>
+        <a href="/Movies-Series/" class="nav__link">
+          <span class="material-icons">movie_creation</span>
+          Movies/Series
+        </a>
+        <a href="/Anime/" class="nav__link">
+          <span class="material-icons">sign_language</span>
+          Anime
+        </a>
+        <a href="/fantasy_inventory/Cart/" class="nav__link">
+          <span class="material-icons">shopping_cart</span>
+          Cart
+        </a>
+      </div>
+      <div class="nav__overlay"></div>
+    </nav>
+    {% block content %} {% endblock %}
+    <script src="{% static "/js/jsBase.js" %}"></script>
+  </body>
+</html>

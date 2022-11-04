@@ -1,0 +1,15 @@
+{% extends "baseTemplate.html" %} {% load static %}
+{%block additionCSSFiles %}
+<link href="{% static "css/styles_successAdd.css" %}" rel="stylesheet"> {% endblock %}
+{% block content%}
+<div class="entire_container">
+    <div class="content">
+        <div class="alert_text"
+            <h1>Successfully removed from Your Cart</h1>
+        </div>
+        <div class="shopping_button">
+            <a class="shopping_link" href="/fantasy_inventory/Cart/">Continue Shopping</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

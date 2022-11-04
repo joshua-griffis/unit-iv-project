@@ -1,0 +1,21 @@
+{% extends "baseTemplate.html" %} {% load static %}{% block additionCSSFiles %}
+<link href="{% static "css/styles_subsection.css" %}" rel="stylesheet">
+{%endblock %} {%block content %}
+<div class="title">
+  <h1>{{ subSectionName }}
+</div>
+<div class="page_items_box">
+  {% for it in subs %}
+  <div class="card">
+    <div class="circle"></div>
+    <div class="content">
+      <h2>{{it.name}}</h2>
+      <p class="price">${{it.price}}</p>
+      <p class="description">{{it.desc}}</p>
+      <a href="/add/{{it.name}}/">ADD TO CART</a>
+    </div>
+    <img src="{% static it.img %}"/>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

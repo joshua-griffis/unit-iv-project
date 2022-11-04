@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap");
+
+.homepage {
+  font-family: "Quicksand", sans-serif;
+}
+
+.homepage_title {
+  font-family: "Kanit, sans-serif";
+  font-size: 2.5rem;
+}
+
+.master {
+  text-align: center;
+}
+.homepage__description__box {
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 30px;
+}
+
+.other_title {
+  text-align: center;
+}

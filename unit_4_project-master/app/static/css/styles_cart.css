@@ -1,0 +1,22 @@
+.cart_selections {
+  display: flex;
+  flex-direction: column;
+}
+
+.order {
+  display: flex;
+  justify-content: space-around;
+  background-color: #eee;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+.order img {
+  height: 150px;
+}

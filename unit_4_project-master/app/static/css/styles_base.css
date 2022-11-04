@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap");
+
+* {
+  z-index: 0;
+}
+body {
+  --header-height: 70px;
+  --nav_width: 200px;
+  margin: var(--header-height) 0 0 0;
+  font-family: "Muli", sans-serif;
+}
+
+.preload * {
+  transition: none !important;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.header__title {
+  margin-left: 3.5rem;
+}
+.header__title__text {
+  color: white;
+  font-family: "Sonsie One", cursive;
+  font-size: 1.5rem;
+}
+
+.header__button {
+  width: var(--header-height);
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.header__button__section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btnCartLink {
+  color: white;
+}
+.btnCartLink:hover {
+  color: rgb(168, 168, 168);
+}
+
+.nav__links {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 100vh;
+  width: var(--nav_width);
+  background: #ffffff;
+  transform: translateX(var(--nav_width));
+  transition: transform 0.3s;
+}
+
+.nav--open .nav__links {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: #666666;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 15px;
+  background: transform 0.2s;
+}
+
+.nav__link > span {
+  margin-right: 15px;
+}
+
+.nav__link--active {
+  color: #009578;
+}
+
+.nav__link--active,
+.nav__link:hover {
+  background: #eeeeee;
+  color: black;
+}
+
+.nav__title {
+  text-align: center;
+  font-weight: 700;
+  color: black;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav--open .nav__overlay {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}

@@ -1,0 +1,13 @@
+{% extends "baseTemplate.html" %} {%load static%} {%block additionCSSFiles%}
+<link href="{% static "css/styles_section.css" %}" rel="stylesheet">
+{%endblock%} {% block content %}
+<div class="title">
+  <a class="back_title_link" href="/">Home/{{ section_name }}</a>
+</div>
+<div class="page_Content">
+  <h1 class="big_title">{{section_name}}</h1>
+  {% for each in sections %}
+  <a href="/sub/{{each}}/" class="links_for_section"> {{ each }} </a>
+  {% endfor %}
+</div>
+{%endblock%}

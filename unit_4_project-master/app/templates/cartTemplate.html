@@ -1,0 +1,19 @@
+{% extends "baseTemplate.html" %}{% load static %} {%block additionCSSFiles%}
+<link href="{% static "css/styles_cart.css" %}" rel="stylesheet"> {% endblock %}
+{% block content %}
+<div class="title">
+  <h1>MY CART</h1>
+</div>
+<div class="cart_selections">
+  {%for i in cart %}
+  <div class="order">
+    <div class="order_img"><img src="{% static "images/"%}{{i.img}}.png/"></div>
+    <div class="order_name">{{ i.name }}</div>
+    <div class="order_price">${{ i.price }}</div>
+
+    <a href="/remove/{{i.name}}">
+      <button>Remove</button>
+    </a>
+  </div>
+  {% endfor %} {% endblock %}
+</div>

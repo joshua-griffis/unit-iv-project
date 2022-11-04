@@ -1,0 +1,36 @@
+.entire_container {
+  margin: auto;
+  width: 80%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.alert_text {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+.shopping_link {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #eee;
+  border-radius: 1em;
+  padding: 5px;
+}
+
+.shopping_button {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 20px;
+  background-color: black;
+  padding: 15px;
+  border-radius: 1em;
+}
